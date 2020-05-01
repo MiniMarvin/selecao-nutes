@@ -18,21 +18,21 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class UsersController {
     @Autowired
-    private UserRepository userRepository;
+    private NutesUserRepository userRepository;
     
     @GetMapping("/api/users")
-    public List<User> getUsers() {
+    public List<NutesUser> getUsers() {
         return this.userRepository.findAll();
     }
     
     @PostMapping("api/users")
-    public User createUser(@Valid @RequestBody User user) {
+    public NutesUser createUser(@Valid @RequestBody NutesUser user) {
         return this.userRepository.save(user);
     }
     
     @PutMapping("api/users/{userId}")
-    public User updateUser(@PathVariable Long userId, 
-            @Valid @RequestBody User userRequest) {
+    public NutesUser updateUser(@PathVariable Long userId, 
+            @Valid @RequestBody NutesUser userRequest) {
         this.userRepository.findById(userId)
                 .map(user -> {
                     user.setFatherName(userRequest.getFatherName());

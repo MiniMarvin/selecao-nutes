@@ -1,8 +1,9 @@
 com/example/UsersController.class
 com/example/ResourceNotFoundException.class
-com/example/UserRepository.class
 com/example/GreetingController.class
-com/example/User.class
 com/example/BasicApplication.class
 com/example/Greeting.class
+com/example/NutesUser.class
 com/example/AuditModel.class
+com/example/SecurityConfig.class
+com/example/NutesUserRepository.class
