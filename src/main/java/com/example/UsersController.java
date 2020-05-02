@@ -20,9 +20,21 @@ public class UsersController {
     @Autowired
     private NutesUserRepository userRepository;
     
+    // TODO: remove the CORS 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/api/users")
     public List<NutesUser> getUsers() {
         return this.userRepository.findAll();
+    }
+    
+    @GetMapping("api/users/{userId}")
+    public NutesUser getUser(@PathVariable Long userId) {
+        NutesUser user = this.userRepository.findById(userId)
+                .map(usr -> {
+                    return usr;
+                }).orElseThrow(() -> new ResourceNotFoundException("User not found"));
+        
+        return user;
     }
     
     @PostMapping("api/users")

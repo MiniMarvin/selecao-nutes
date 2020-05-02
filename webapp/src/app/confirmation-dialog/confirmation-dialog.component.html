@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>{{data.title}}</h1>
+<div mat-dialog-content>
+  <p>{{ data.message }}</p>
+</div>
+<div mat-dialog-actions>
+    <mat-grid-list cols="2" rowHeight="40px">
+        <mat-grid-tile colspan="1" rowspan="1" style.background="white">
+            <button mat-flat-button color="primary" (click)="ok()">{{ data.actionTitle }}</button>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="1" style.background="white">
+            <button mat-button color="primary" (click)="cancel()">cancelar</button>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

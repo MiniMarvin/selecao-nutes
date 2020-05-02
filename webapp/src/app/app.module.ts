@@ -15,12 +15,15 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     AddUserComponent,
+    ConfirmationDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +39,7 @@ import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
     MatNativeDateModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [
     {provide: MAT_DATE_LOCALE, useValue: 'pt-BR'},
