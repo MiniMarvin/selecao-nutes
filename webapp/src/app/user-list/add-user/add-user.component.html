@@ -3,7 +3,11 @@
       <button mat-button color="primary" routerLink="/" aria-label="Adicionar um usuário">
         <mat-icon>arrow_back_ios</mat-icon>
       </button>
-      <span class="title">Adicionar usuário</span>
+      <span *ngIf="addOrEdit==='edit'; then editTitle else addTitle" class="title"></span>
+      <span class="title">
+        <ng-template #editTitle>Editar usuário</ng-template>
+        <ng-template #addTitle>Adicionar usuário</ng-template>
+      </span>
     </mat-toolbar-row>
 </mat-toolbar>
 
@@ -44,6 +48,14 @@
       <!-- <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete user icon">delete</mat-icon> -->
       Salvar usuário
     </button>
+
+    <!-- TODO: add a delete button -->
+    <div *ngIf="addOrEdit==='edit'">
+      <button mat-button color="primary" class="submit-button" (click)="deleteUser()">
+        <!-- <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete user icon">delete</mat-icon> -->
+        deletar usuário
+      </button>
+    </div>
   </form>
 </div>
 

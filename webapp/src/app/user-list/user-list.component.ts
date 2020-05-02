@@ -2,7 +2,7 @@ import { Component, OnInit, HostListener, OnDestroy, Inject } from '@angular/cor
 // import { users } from './user-list-datasource';
 import { User } from '../models/user';
 import { UserService } from '../services/user.service';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { ConfirmationDialogComponent } from '../confirmation-dialog/confirmation-dialog.component';
 
 @Component({
@@ -59,6 +59,10 @@ export class UserListComponent implements OnInit, OnDestroy {
     });
   }
 
+  editUser(user: User) {
+    console.log(user);
+  }
+
   presentDate(date: Date): string{
     // for the case where the date come as an integer
     date = new Date(date);
@@ -67,6 +71,4 @@ export class UserListComponent implements OnInit, OnDestroy {
     const ano  = date.getFullYear();
     return dia + '/' + mes + '/' + ano;
   }
-
-  
 }

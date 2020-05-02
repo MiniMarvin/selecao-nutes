@@ -9,7 +9,7 @@
 </mat-toolbar>
 
 <div class="content">
-    <mat-grid-list [cols]="colsNum" rowHeight="260px">
+    <mat-grid-list [cols]="colsNum" rowHeight="275px">
         <mat-grid-tile
         *ngFor="let user of users"
         colspan="1"
@@ -30,7 +30,10 @@
                     <p> <b>nascimento:</b> {{ presentDate(user.birthDate) }} </p>
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-flat-button color="primary">editar informações</button>
+                    <!-- <button mat-flat-button color="primary" (click)="editUser(user)">editar informações</button> -->
+                    <button mat-flat-button color="primary" routerLink="/edit-user" [state]="{ data: user}">
+                        editar informações
+                    </button>
                 </mat-card-actions>
             </mat-card>
         </mat-grid-tile>
