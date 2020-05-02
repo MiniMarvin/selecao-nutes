@@ -17,6 +17,7 @@ import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-
     UserListComponent,
     AddUserComponent,
     ConfirmationDialogComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

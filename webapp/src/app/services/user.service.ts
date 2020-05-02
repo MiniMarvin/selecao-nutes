@@ -9,7 +9,7 @@ import { User } from '../models/user';
 })
 export class UserService {
   // TODO: change this URL to the heroku api
-  url = 'http://localhost:8080/api/users';
+  url = '/api/users';
 
   constructor(private httpClient: HttpClient) { }
 
