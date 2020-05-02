@@ -57,7 +57,7 @@ export class AddUserComponent implements OnInit {
     }
 
     const newUser: User = {
-      id: this.userData.id || 0,
+      id: this.userData ? this.userData.id : 0,
       name: this.formControls.name.value,
       username: this.formControls.username.value,
       fatherName: this.formControls.fatherName.value,
