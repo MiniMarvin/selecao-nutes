@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #f8f5fa; }
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar, .toolbar { 
+
+
+  margin-bottom: 30px;
+  button, mat-toolbar-row.button {
+    color: white;
+    width: 36px;
+    height: 36px;
+    mat-icon {
+      font-size: 36px;
+      width: 36px;
+      height: 36px;
+      color: white;
+    }
+  }
+  .title {
+    padding-left: 16px;
+  }
+}
+
+.float{
+    position:fixed;
+    width:56px;
+    height:56px;
+    bottom:40px;
+    right:40px;
+}

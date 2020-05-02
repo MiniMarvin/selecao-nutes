@@ -1,0 +1,44 @@
+.user-card {
+    // max-width: 400px;
+    width: 80%;
+    h1,h2,h3,h4,h5,h6,span,p {
+        text-align: left;
+    }
+    mat-card-header{
+        margin-bottom: 10px;
+        a {
+            color: #673ab7;
+        }
+        button {
+            height: 100%;
+            vertical-align: top;
+            padding-right: 0px;
+        }
+        mat-card-title {
+            padding-top: 10px;
+        }
+    }
+    mat-card-content {
+        margin-left: 16px;
+    }
+    mat-card-actions {
+        justify-content: center;
+        text-align: left;
+        button {
+            width: 100%;
+        }
+    }
+}
+
+mat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.example-icon {
+    padding: 0 14px;
+}
