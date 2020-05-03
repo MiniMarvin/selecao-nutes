@@ -28,7 +28,7 @@ export class UserListComponent implements OnInit, OnDestroy {
     this.getUsers();
     this.timer = window.setInterval(() => {
       this.getUsers();
-    }, 3000);
+    }, 200);
   }
 
   @HostListener('window:resize', ['$event'])
